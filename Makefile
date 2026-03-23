@@ -10,7 +10,7 @@ OUT := $(BIN_DIR)/$(TARGET)
 .DEFAULT_GOAL := build
 .PHONY: build run clean
 
-ifneq ($(filter build,run,$(MAKECMDGOALS)),)
+ifneq ($(filter build run,$(MAKECMDGOALS)),)
 ifeq ($(strip $(SRC)),)
 $(error SRC is not set. Usage: make run SRC=path/to/main.c)
 endif
